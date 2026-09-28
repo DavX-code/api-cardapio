@@ -1,0 +1,36 @@
+{
+  "name": "api-cardapio",
+  "version": "1.0.0",
+  "description": "API REST em Fastify + TypeScript + Drizzle ORM (PostgreSQL) - Atividade 001",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "start": "tsx src/server.ts",
+    "build": "tsc --noEmit",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio",
+    "db:seed": "tsx src/db/seed.ts",
+    "db:setup": "npm run db:migrate && npm run db:seed",
+    "test:smoke": "tsx scripts/smoke.ts"
+  },
+  "dependencies": {
+    "@fastify/cors": "^11.3.0",
+    "@fastify/swagger": "^9.9.0",
+    "@fastify/swagger-ui": "^6.1.1",
+    "dotenv": "^18.0.3",
+    "drizzle-orm": "^0.45.3",
+    "fastify": "^5.12.5",
+    "fastify-type-provider-zod": "^7.0.0",
+    "postgres": "^3.4.9",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.6",
+    "drizzle-kit": "^0.31.11",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  }
+}
